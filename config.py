@@ -5,36 +5,36 @@ Configuration file for UPS SNMP monitoring
 # List of UPS devices to monitor
 UPS_DEVICES = [
     {
-        'name': 'UPS_1',
-        'ip': '192.168.1.100',  # Replace with your actual IP
+        'name': '10F_UPS',
+        'ip': '172.21.2.13',
         'port': 161,
         'community': 'public',  # SNMP community string
         'snmp_version': 2,  # SNMP version (1, 2, or 3)
     },
     {
-        'name': 'UPS_2',
-        'ip': '192.168.1.101',  # Replace with your actual IP
+        'name': '9F_UPS',
+        'ip': '172.21.3.11',
         'port': 161,
         'community': 'public',
         'snmp_version': 2,
     },
     {
-        'name': 'UPS_3',
-        'ip': '192.168.1.102',  # Replace with your actual IP
+        'name': '8F_UPS',
+        'ip': '172.21.4.10',
         'port': 161,
         'community': 'public',
         'snmp_version': 2,
     },
     {
-        'name': 'UPS_4',
-        'ip': '192.168.1.103',  # Replace with your actual IP
+        'name': '7F_UPS',
+        'ip': '172.21.6.10',
         'port': 161,
         'community': 'public',
         'snmp_version': 2,
     },
     {
-        'name': 'UPS_5',
-        'ip': '192.168.1.104',  # Replace with your actual IP
+        'name': '3F_UPS',
+        'ip': '172.21.5.14',
         'port': 161,
         'community': 'public',
         'snmp_version': 2,
