@@ -97,8 +97,25 @@ class DataLogger:
         # Flatten nested dictionaries
         flat_data = self._flatten_dict(data)
         
+        # Remove None values (No Such Instance OIDs)
+        flat_data = {k: v for k, v in flat_data.items() if v is not None}
+        
+        # If file exists, read existing columns to maintain consistency
+        if file_exists:
+            with open(filepath, 'r') as f:
+                reader = csv.DictReader(f)
+                existing_fields = reader.fieldnames if reader.fieldnames else []
+                # Only use fields that exist in the current data
+                fieldnames = [f for f in existing_fields if f in flat_data.keys()]
+                # Add any new fields
+                for key in flat_data.keys():
+                    if key not in fieldnames:
+                        fieldnames.append(key)
+        else:
+            fieldnames = list(flat_data.keys())
+        
         with open(filepath, 'a', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=flat_data.keys())
+            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
             
             # Write header if file is new
             if not file_exists:
@@ -116,10 +133,29 @@ class DataLogger:
         """
         filepath = self._get_log_filename(device_name)
         
+        # Remove None values before saving
+        clean_data = self._remove_none_values(data)
+        
         # Append to JSON lines format
         with open(filepath, 'a') as f:
-            json.dump(data, f)
+            json.dump(clean_data, f)
             f.write('\n')
+    
+    def _remove_none_values(self, d: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Recursively remove None values from dictionary
+        
+        Args:
+            d: Dictionary to clean
+            
+        Returns:
+            Dictionary without None values
+        """
+        if not isinstance(d, dict):
+            return d
+        return {k: self._remove_none_values(v) 
+                for k, v in d.items() 
+                if v is not None}
             
     def _flatten_dict(self, d: Dict[str, Any], parent_key: str = '', sep: str = '_') -> Dict[str, Any]:
         """

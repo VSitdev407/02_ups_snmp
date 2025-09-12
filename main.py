@@ -106,8 +106,9 @@ class UPSMonitor:
                 f"Source: {data.get('output_source', 'N/A')}"
             ]
             
-            if data.get('present_alarms', 0) > 0:
-                summary_parts.append(f"ALARMS: {data.get('present_alarms')}")
+            present_alarms = data.get('present_alarms', 0)
+            if present_alarms and int(present_alarms) > 0:
+                summary_parts.append(f"ALARMS: {present_alarms}")
                 
             logger.info(" | ".join(summary_parts))
         else:

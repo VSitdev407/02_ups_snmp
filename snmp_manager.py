@@ -184,7 +184,8 @@ class UPSSNMPManager:
         Returns:
             Parsed value
         """
-        if value == 'No Such Object currently exists at this OID':
+        if value == 'No Such Object currently exists at this OID' or \
+           value == 'No Such Instance currently exists at this OID':
             return None
             
         try:

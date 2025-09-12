@@ -1,0 +1,3 @@
+timestamp,ip,status,error,battery_status,battery_status_code,time_on_battery,minutes_remaining,charge_remaining,voltage,current,temperature,output_source,output_voltage,output_current,output_power,output_load,input_voltage,input_frequency,present_alarms,device_name
+2025-09-12T11:16:12.399956,172.21.5.14,online,,batteryNormal,2,0,42,100,272.2,No Such Instance currently exists at this OID,23.0,3,230.0,No Such Instance currently exists at this OID,No Such Instance currently exists at this OID,23,216.0,599.0,0,3F_UPS
+2025-09-12T11:17:12.517842,172.21.5.14,online,,batteryNormal,2,0,42,100,272.2,No Such Instance currently exists at this OID,23.0,3,230.0,No Such Instance currently exists at this OID,No Such Instance currently exists at this OID,23,216.0,599.0,0,3F_UPS
