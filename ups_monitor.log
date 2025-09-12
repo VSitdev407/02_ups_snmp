@@ -74,3 +74,39 @@
 2025-09-12 14:00:31,055 - __main__ - INFO - Monitoring loop stopped for 7F_UPS
 2025-09-12 14:00:31,852 - __main__ - INFO - Shutting down monitoring system...
 2025-09-12 14:00:31,853 - __main__ - INFO - All monitoring threads stopped
+2025-09-12 14:01:30,297 - __main__ - INFO - Received signal 2
+2025-09-12 14:01:30,298 - __main__ - INFO - Monitoring loop stopped for 10F_UPS
+2025-09-12 14:01:30,298 - __main__ - INFO - Monitoring loop stopped for 7F_UPS
+2025-09-12 14:01:30,299 - __main__ - INFO - Monitoring loop stopped for 9F_UPS
+2025-09-12 14:01:30,299 - __main__ - INFO - Monitoring loop stopped for 8F_UPS
+2025-09-12 14:01:30,299 - __main__ - INFO - Monitoring loop stopped for 3F_UPS
+2025-09-12 14:01:30,967 - __main__ - INFO - Shutting down monitoring system...
+2025-09-12 14:01:30,968 - __main__ - INFO - All monitoring threads stopped
+2025-09-12 14:01:31,334 - __main__ - INFO - ============================================================
+2025-09-12 14:01:31,335 - __main__ - INFO - UPS SNMP Monitoring System Starting
+2025-09-12 14:01:31,335 - __main__ - INFO - Monitoring 5 UPS devices
+2025-09-12 14:01:31,335 - __main__ - INFO - Poll interval: 1 hour
+2025-09-12 14:01:31,335 - __main__ - INFO - Log format: csv
+2025-09-12 14:01:31,335 - __main__ - INFO - Log directory: logs
+2025-09-12 14:01:31,335 - __main__ - INFO - ============================================================
+2025-09-12 14:01:31,335 - __main__ - INFO - Monitoring loop started for 10F_UPS
+2025-09-12 14:01:31,335 - __main__ - INFO - Started monitoring thread for 10F_UPS (172.21.2.13)
+2025-09-12 14:01:31,595 - __main__ - INFO - 10F_UPS: Status changed from None to online
+2025-09-12 14:01:31,596 - __main__ - INFO - 10F_UPS: | Battery: 100% | Load: 28% | Output: 220.0V | Source: 3
+2025-09-12 14:01:31,841 - __main__ - INFO - Monitoring loop started for 9F_UPS
+2025-09-12 14:01:31,841 - __main__ - INFO - Started monitoring thread for 9F_UPS (172.21.3.11)
+2025-09-12 14:01:32,048 - __main__ - INFO - 9F_UPS: Status changed from None to online
+2025-09-12 14:01:32,049 - __main__ - INFO - 9F_UPS: | Battery: 100% | Load: 24% | Output: 220.0V | Source: 3 | ALARMS: 1
+2025-09-12 14:01:32,344 - __main__ - INFO - Monitoring loop started for 8F_UPS
+2025-09-12 14:01:32,344 - __main__ - INFO - Started monitoring thread for 8F_UPS (172.21.4.10)
+2025-09-12 14:01:32,589 - __main__ - INFO - 8F_UPS: Status changed from None to online
+2025-09-12 14:01:32,589 - __main__ - INFO - 8F_UPS: | Battery: 100% | Load: 34% | Output: 230.0V | Source: 3
+2025-09-12 14:01:32,851 - __main__ - INFO - Monitoring loop started for 7F_UPS
+2025-09-12 14:01:32,852 - __main__ - INFO - Started monitoring thread for 7F_UPS (172.21.6.10)
+2025-09-12 14:01:33,069 - __main__ - INFO - 7F_UPS: Status changed from None to online
+2025-09-12 14:01:33,071 - __main__ - INFO - 7F_UPS: | Battery: 100% | Load: 18% | Output: 230.0V | Source: 3 | ALARMS: 1
+2025-09-12 14:01:33,358 - __main__ - INFO - Monitoring loop started for 3F_UPS
+2025-09-12 14:01:33,358 - __main__ - INFO - Started monitoring thread for 3F_UPS (172.21.5.14)
+2025-09-12 14:01:33,564 - __main__ - INFO - 3F_UPS: Status changed from None to online
+2025-09-12 14:01:33,565 - __main__ - INFO - 3F_UPS: | Battery: 100% | Load: 23% | Output: 230.0V | Source: 3
+2025-09-12 14:01:33,861 - __main__ - INFO - All 5 monitoring threads started

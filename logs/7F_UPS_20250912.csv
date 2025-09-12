@@ -2,3 +2,5 @@ timestamp,ip,status,error,battery_status,battery_status_code,time_on_battery,min
 2025-09-12T14:00:09.026102,172.21.6.10,online,,batteryNormal,2,0,72,100,272.8,No Such Instance currently exists at this OID,20.0,3,230.0,No Such Instance currently exists at this OID,794.0,19,219.0,600.0,1,7F_UPS
 2025-09-12T14:00:29.940968,172.21.6.10,online,batteryNormal,2,0,72,100,273.1,20.0,3,229.0,774.0,19,218.0,599.0,1,7F_UPS
 2025-09-12T14:01:09.252261,172.21.6.10,online,,batteryNormal,2,0,72,100,272.5,No Such Instance currently exists at this OID,19.0,3,230.0,No Such Instance currently exists at this OID,785.0,18,219.0,599.0,1,7F_UPS
+2025-09-12T14:01:32.974635,172.21.6.10,online,batteryNormal,2,0,72,100,272.5,20.0,3,230.0,791.0,18,218.0,600.0,1,7F_UPS
+2025-09-12T14:02:09.465665,172.21.6.10,online,,batteryNormal,2,0,72,100,272.8,No Such Instance currently exists at this OID,20.0,3,230.0,No Such Instance currently exists at this OID,774.0,18,218.0,600.0,1,7F_UPS
