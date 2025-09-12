@@ -326,3 +326,8 @@ caused by <class 'TypeError'>: <lambda>() takes 3 positional arguments but 4 wer
 2025-09-12 11:17:11,676 - __main__ - ERROR - Error in monitoring loop for 8F_UPS: '>' not supported between instances of 'str' and 'int'
 2025-09-12 11:17:12,335 - __main__ - ERROR - Error in monitoring loop for 7F_UPS: '>' not supported between instances of 'str' and 'int'
 2025-09-12 11:17:12,622 - __main__ - ERROR - Error in monitoring loop for 3F_UPS: '>' not supported between instances of 'str' and 'int'
+2025-09-12 11:18:11,534 - __main__ - ERROR - Error in monitoring loop for 9F_UPS: '>' not supported between instances of 'str' and 'int'
+2025-09-12 11:18:11,828 - __main__ - ERROR - Error in monitoring loop for 8F_UPS: '>' not supported between instances of 'str' and 'int'
+2025-09-12 11:18:11,926 - __main__ - ERROR - Error in monitoring loop for 10F_UPS: '>' not supported between instances of 'str' and 'int'
+2025-09-12 11:18:12,465 - __main__ - ERROR - Error in monitoring loop for 7F_UPS: '>' not supported between instances of 'str' and 'int'
+2025-09-12 11:18:12,752 - __main__ - ERROR - Error in monitoring loop for 3F_UPS: '>' not supported between instances of 'str' and 'int'
