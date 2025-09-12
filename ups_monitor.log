@@ -1,0 +1,6 @@
+2025-09-12 13:55:09,166 - __main__ - INFO - Current status of all UPS devices:
+2025-09-12 13:55:09,275 - __main__ - INFO - 10F_UPS: Online | Battery: 100% | Load: 29%
+2025-09-12 13:55:09,363 - __main__ - INFO - 9F_UPS: Online | Battery: 100% | Load: 24%
+2025-09-12 13:55:09,450 - __main__ - INFO - 8F_UPS: Online | Battery: 100% | Load: 34%
+2025-09-12 13:55:09,535 - __main__ - INFO - 7F_UPS: Online | Battery: 100% | Load: 18%
+2025-09-12 13:55:09,637 - __main__ - INFO - 3F_UPS: Online | Battery: 100% | Load: 23%

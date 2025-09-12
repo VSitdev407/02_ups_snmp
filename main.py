@@ -131,7 +131,12 @@ class UPSMonitoringSystem:
         logger.info("=" * 60)
         logger.info("UPS SNMP Monitoring System Starting")
         logger.info(f"Monitoring {len(UPS_DEVICES)} UPS devices")
-        logger.info(f"Poll interval: {POLL_INTERVAL} seconds")
+        interval_mins = POLL_INTERVAL // 60
+        interval_hours = POLL_INTERVAL // 3600
+        if interval_hours >= 1:
+            logger.info(f"Poll interval: {interval_hours} hour{'s' if interval_hours > 1 else ''}")
+        else:
+            logger.info(f"Poll interval: {interval_mins} minute{'s' if interval_mins != 1 else ''}")
         logger.info(f"Log format: {LOG_FORMAT}")
         logger.info(f"Log directory: {LOG_DIRECTORY}")
         logger.info("=" * 60)

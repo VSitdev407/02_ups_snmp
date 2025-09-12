@@ -42,7 +42,7 @@ UPS_DEVICES = [
 ]
 
 # Polling interval in seconds
-POLL_INTERVAL = 60
+POLL_INTERVAL = 3600  # 1 hour (3600 seconds)
 
 # Data storage settings
 LOG_DIRECTORY = 'logs'
