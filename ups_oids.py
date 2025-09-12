@@ -106,7 +106,6 @@ ESSENTIAL_OIDS = {
     **UPS_BATTERY,
     'output_source': UPS_OUTPUT['source'],
     'output_voltage': UPS_OUTPUT['voltage'] + '.1',  # Line 1
-    'output_current': UPS_OUTPUT['current'] + '.1',  # Line 1
     'output_power': UPS_OUTPUT['power'] + '.1',  # Line 1
     'output_load': UPS_OUTPUT['percent_load'] + '.1',  # Line 1
     'input_voltage': UPS_INPUT['voltage'] + '.1',  # Line 1
