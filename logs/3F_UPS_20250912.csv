@@ -4,3 +4,7 @@ timestamp,ip,status,error,battery_status,battery_status_code,time_on_battery,min
 2025-09-12T14:01:09.252039,172.21.5.14,online,,batteryNormal,2,0,42,100,272.2,No Such Instance currently exists at this OID,23.0,3,229.0,No Such Instance currently exists at this OID,No Such Instance currently exists at this OID,24,217.0,600.0,0,3F_UPS
 2025-09-12T14:01:33.478535,172.21.5.14,online,batteryNormal,2,0,42,100,272.2,23.0,3,230.0,23,218.0,599.0,0,3F_UPS
 2025-09-12T14:02:09.453012,172.21.5.14,online,,batteryNormal,2,0,42,100,272.2,No Such Instance currently exists at this OID,23.0,3,230.0,No Such Instance currently exists at this OID,No Such Instance currently exists at this OID,23,217.0,600.0,0,3F_UPS
+2025-09-12T15:01:33.452732,172.21.5.14,online,batteryNormal,2,0,42,100,271.8,23.0,3,230.0,23,220.0,599.0,0,3F_UPS
+2025-09-12T16:33:59.895987,172.21.5.14,online,batteryNormal,2,0,42,100,272.2,26.0,3,230.0,24,222.0,600.0,0,3F_UPS
+2025-09-12T17:41:03.723294,172.21.5.14,online,batteryNormal,2,0,42,100,272.2,26.0,3,230.0,23,221.0,599.0,0,3F_UPS
+2025-09-12T18:42:58.209038,172.21.5.14,online,batteryNormal,2,0,42,100,272.2,26.0,3,230.0,23,222.0,600.0,0,3F_UPS

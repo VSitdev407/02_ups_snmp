@@ -110,3 +110,28 @@
 2025-09-12 14:01:33,564 - __main__ - INFO - 3F_UPS: Status changed from None to online
 2025-09-12 14:01:33,565 - __main__ - INFO - 3F_UPS: | Battery: 100% | Load: 23% | Output: 230.0V | Source: 3
 2025-09-12 14:01:33,861 - __main__ - INFO - All 5 monitoring threads started
+2025-09-12 15:01:31,759 - __main__ - INFO - 10F_UPS: | Battery: 100% | Load: 29% | Output: 221.0V | Source: 3
+2025-09-12 15:01:32,077 - __main__ - INFO - 9F_UPS: | Battery: 100% | Load: 24% | Output: 220.0V | Source: 3 | ALARMS: 1
+2025-09-12 15:01:32,613 - __main__ - INFO - 8F_UPS: | Battery: 100% | Load: 35% | Output: 230.0V | Source: 3
+2025-09-12 15:01:33,071 - __main__ - INFO - 7F_UPS: | Battery: 100% | Load: 19% | Output: 230.0V | Source: 3 | ALARMS: 1
+2025-09-12 15:01:33,595 - __main__ - INFO - 3F_UPS: | Battery: 100% | Load: 23% | Output: 230.0V | Source: 3
+2025-09-12 16:33:58,206 - __main__ - INFO - 10F_UPS: | Battery: 100% | Load: 30% | Output: 221.0V | Source: 3
+2025-09-12 16:33:58,504 - __main__ - INFO - 9F_UPS: | Battery: 100% | Load: 23% | Output: 220.0V | Source: 3 | ALARMS: 1
+2025-09-12 16:33:59,038 - __main__ - INFO - 8F_UPS: | Battery: 100% | Load: 34% | Output: 230.0V | Source: 3
+2025-09-12 16:33:59,492 - __main__ - INFO - 7F_UPS: | Battery: 100% | Load: 19% | Output: 230.0V | Source: 3 | ALARMS: 1
+2025-09-12 16:34:00,028 - __main__ - INFO - 3F_UPS: | Battery: 100% | Load: 24% | Output: 230.0V | Source: 3
+2025-09-12 17:41:02,131 - __main__ - INFO - 10F_UPS: | Battery: 100% | Load: 28% | Output: 220.0V | Source: 3
+2025-09-12 17:41:02,322 - __main__ - INFO - 9F_UPS: | Battery: 100% | Load: 24% | Output: 220.0V | Source: 3 | ALARMS: 1
+2025-09-12 17:41:02,860 - __main__ - INFO - 8F_UPS: | Battery: 100% | Load: 34% | Output: 230.0V | Source: 3
+2025-09-12 17:41:03,292 - __main__ - INFO - 7F_UPS: | Battery: 100% | Load: 18% | Output: 230.0V | Source: 3 | ALARMS: 1
+2025-09-12 17:41:03,850 - __main__ - INFO - 3F_UPS: | Battery: 100% | Load: 23% | Output: 230.0V | Source: 3
+2025-09-12 18:42:56,699 - __main__ - INFO - 10F_UPS: | Battery: 100% | Load: 29% | Output: 220.0V | Source: 3
+2025-09-12 18:42:56,836 - __main__ - INFO - 9F_UPS: | Battery: 100% | Load: 25% | Output: 220.0V | Source: 3 | ALARMS: 1
+2025-09-12 18:42:57,357 - __main__ - INFO - 8F_UPS: | Battery: 100% | Load: 35% | Output: 230.0V | Source: 3
+2025-09-12 18:42:57,796 - __main__ - INFO - 7F_UPS: | Battery: 100% | Load: 18% | Output: 230.0V | Source: 3 | ALARMS: 1
+2025-09-12 18:42:58,344 - __main__ - INFO - 3F_UPS: | Battery: 100% | Load: 23% | Output: 230.0V | Source: 3
+2025-09-15 14:16:15,897 - __main__ - INFO - 10F_UPS: | Battery: 100% | Load: 30% | Output: 221.0V | Source: 3
+2025-09-15 14:16:15,897 - __main__ - INFO - 9F_UPS: | Battery: 100% | Load: 24% | Output: 220.0V | Source: 3 | ALARMS: 1
+2025-09-15 14:16:16,439 - __main__ - INFO - 8F_UPS: | Battery: 100% | Load: 34% | Output: 230.0V | Source: 3
+2025-09-15 14:16:16,870 - __main__ - INFO - 7F_UPS: | Battery: 100% | Load: 18% | Output: 230.0V | Source: 3 | ALARMS: 1
+2025-09-15 14:16:17,433 - __main__ - INFO - 3F_UPS: | Battery: 100% | Load: 23% | Output: 230.0V | Source: 3

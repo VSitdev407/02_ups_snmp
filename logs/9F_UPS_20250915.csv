@@ -1,0 +1,2 @@
+timestamp,ip,status,battery_status,battery_status_code,time_on_battery,minutes_remaining,charge_remaining,voltage,temperature,output_source,output_voltage,output_power,output_load,input_voltage,input_frequency,present_alarms,device_name
+2025-09-15T14:16:15.787622,172.21.3.11,online,batteryNormal,2,0,39,100,272.8,24.0,3,220.0,1035.0,24,222.0,600.0,1,9F_UPS
