@@ -45,9 +45,6 @@ UPS_DEVICES = [
 
 POLL_INTERVAL = 3600  # 1 hour
 LOG_DIRECTORY = 'logs'
-LOG_FORMAT = 'csv'
-LOG_ROTATION = True
-MAX_LOG_SIZE_MB = 100
 SNMP_TIMEOUT = 5
 SNMP_RETRIES = 3
 DEBUG = False
@@ -89,17 +86,18 @@ def poll_ups():
     date_str = now.strftime('%Y-%m-%d')
     time_str = now.strftime('%H:%M:%S')
     
-    log_file = get_log_file(date_str)
+    if not os.path.exists(LOG_DIRECTORY):
+        os.makedirs(LOG_DIRECTORY)
     
-    # Check if file exists, if not, write header
-    file_exists = os.path.exists(log_file)
-    
-    with open(log_file, 'a', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        if not file_exists:
-            writer.writerow(['Date', 'Time', 'Vin', 'Vout', 'Vbat', 'Fin', 'Fout', 'Load', 'Temp', 'UPS_Name'])
+    for ups in UPS_DEVICES:
+        log_file = os.path.join(LOG_DIRECTORY, f"UPS_{ups['name']}_{date_str}.csv")
         
-        for ups in UPS_DEVICES:
+        # Write mode 'w' to overwrite the file each day
+        with open(log_file, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            # Write header
+            writer.writerow(['Date', 'Time', 'Vin', 'Vout', 'Vbat', 'Fin', 'Fout', 'Load', 'Temp', 'UPS_Name'])
+            
             row = [date_str, time_str]
             
             vin = get_snmp_value(ups, OIDS['Vin'])
@@ -124,26 +122,6 @@ def poll_ups():
             
             if DEBUG:
                 print(f"Logged data for {ups['name']}: {row}")
-
-def get_log_file(date_str):
-    if not os.path.exists(LOG_DIRECTORY):
-        os.makedirs(LOG_DIRECTORY)
-    
-    base_name = f"ups_monitor_{date_str}.csv"
-    log_file = os.path.join(LOG_DIRECTORY, base_name)
-    
-    if LOG_ROTATION:
-        # Check size and rotate if needed
-        if os.path.exists(log_file) and os.path.getsize(log_file) / (1024 * 1024) >= MAX_LOG_SIZE_MB:
-            counter = 1
-            while True:
-                rotated_name = os.path.join(LOG_DIRECTORY, f"ups_monitor_{date_str}_{counter}.csv")
-                if not os.path.exists(rotated_name):
-                    os.rename(log_file, rotated_name)
-                    break
-                counter += 1
-    
-    return log_file
 
 if __name__ == '__main__':
     while True:
