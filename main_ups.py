@@ -7,35 +7,35 @@ from pysnmp.hlapi import *
 # Configuration from provided info
 UPS_DEVICES = [
     {
-        'name': '10F_UPS',
+        'name': 'UPS_10F',
         'ip': '172.21.2.13',
         'port': 161,
         'community': 'public',
         'snmp_version': 2,
     },
     {
-        'name': '9F_UPS',
+        'name': 'UPS_9F',
         'ip': '172.21.3.11',
         'port': 161,
         'community': 'public',
         'snmp_version': 2,
     },
     {
-        'name': '8F_UPS',
+        'name': 'UPS_8F',
         'ip': '172.21.4.10',
         'port': 161,
         'community': 'public',
         'snmp_version': 2,
     },
     {
-        'name': '7F_UPS',
+        'name': 'UPS_7F',
         'ip': '172.21.6.10',
         'port': 161,
         'community': 'public',
         'snmp_version': 2,
     },
     {
-        'name': '3F_UPS',
+        'name': 'UPS_3F',
         'ip': '172.21.5.14',
         'port': 161,
         'community': 'public',
@@ -43,7 +43,7 @@ UPS_DEVICES = [
     },
 ]
 
-POLL_INTERVAL = 3600  # 1 hour
+POLL_INTERVAL = 60
 LOG_DIRECTORY = 'logs'
 SNMP_TIMEOUT = 5
 SNMP_RETRIES = 3
@@ -90,7 +90,7 @@ def poll_ups():
         os.makedirs(LOG_DIRECTORY)
     
     for ups in UPS_DEVICES:
-        log_file = os.path.join(LOG_DIRECTORY, f"UPS_{ups['name']}_{date_str}.csv")
+        log_file = os.path.join(LOG_DIRECTORY, f"{ups['name']}.csv")
         
         # Check if file exists to determine if header is needed
         file_exists = os.path.exists(log_file)
