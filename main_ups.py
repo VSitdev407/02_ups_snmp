@@ -2,6 +2,7 @@ import os
 import csv
 import time
 import datetime
+import shutil
 from pysnmp.hlapi import *
 
 # Configuration from provided info
@@ -45,6 +46,9 @@ UPS_DEVICES = [
 
 POLL_INTERVAL = 3600
 LOG_DIRECTORY = 'logs'
+ONELAKE_PATH = r"C:\\Users\\itdev\\OneLake - Microsoft\\global-IT-DEV\\Global_IT_Lakehouse.Lakehouse\\Files"
+OUTPUT_DIR = os.path.join(ONELAKE_PATH, "99_ups_data")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 SNMP_TIMEOUT = 5
 SNMP_RETRIES = 3
 DEBUG = False
@@ -91,11 +95,13 @@ def poll_ups():
     
     for ups in UPS_DEVICES:
         log_file = os.path.join(LOG_DIRECTORY, f"{ups['name']}.csv")
+
+        onelake_log_file = os.path.join(OUTPUT_DIR, f"{ups['name']}.csv")
         
         # Check if file exists to determine if header is needed
         file_exists = os.path.exists(log_file)
-        
-        with open(log_file, 'a', newline='') as csvfile:
+
+        with open(log_file, 'a', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
             # Write header only if file doesn't exist
             if not file_exists:
@@ -125,6 +131,16 @@ def poll_ups():
             
             if DEBUG:
                 print(f"Logged data for {ups['name']}: {row}")
+        # Copy to OneLake path
+        try:
+            # ensure the output directory exists
+            os.makedirs(os.path.dirname(onelake_log_file), exist_ok=True)
+            shutil.copy(log_file, onelake_log_file)
+            if DEBUG:
+                print(f"Copied log to OneLake path: {onelake_log_file}")
+        except Exception as e:
+            if DEBUG:
+                print(f"Error copying log to OneLake path: {e}")
 
 if __name__ == '__main__':
     while True:
