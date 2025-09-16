@@ -92,11 +92,14 @@ def poll_ups():
     for ups in UPS_DEVICES:
         log_file = os.path.join(LOG_DIRECTORY, f"UPS_{ups['name']}_{date_str}.csv")
         
-        # Write mode 'w' to overwrite the file each day
-        with open(log_file, 'w', newline='') as csvfile:
+        # Check if file exists to determine if header is needed
+        file_exists = os.path.exists(log_file)
+        
+        with open(log_file, 'a', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            # Write header
-            writer.writerow(['Date', 'Time', 'Vin', 'Vout', 'Vbat', 'Fin', 'Fout', 'Load', 'Temp', 'UPS_Name'])
+            # Write header only if file doesn't exist
+            if not file_exists:
+                writer.writerow(['Date', 'Time', 'Vin', 'Vout', 'Vbat', 'Fin', 'Fout', 'Load', 'Temp', 'UPS_Name'])
             
             row = [date_str, time_str]
             
